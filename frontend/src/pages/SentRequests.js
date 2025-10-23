@@ -12,7 +12,7 @@ export default function SentRequests() {
 
   const fetchRequests = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/swaps/sent", {
+      const res = await axios.get("https://book-swap-organizer.onrender.com/api/swaps/sent", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setRequests(res.data);
