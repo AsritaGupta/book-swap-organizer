@@ -31,7 +31,7 @@ export default function Home() {
 
   const fetchBooks = async (token) => {
     try {
-      const res = await axios.get('http://localhost:5000/api/books', {
+      const res = await axios.get('https://book-swap-organizer.onrender.com/api/books', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setBooks(res.data);
