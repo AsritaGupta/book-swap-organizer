@@ -8,7 +8,7 @@ import swapRoutes from './routes/swapRoutes.js';
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'https://book-swap-organizer-1.onrender.com', credentials: true }));
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
