@@ -14,7 +14,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/users/register', formData, {
+      await axios.post('https://book-swap-organizer.onrender.com/api/users/register', formData, {
         headers: { 'Content-Type': 'application/json' }
       });
       setMessage('Registration successful! You may now login.');
